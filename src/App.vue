@@ -14,18 +14,19 @@
 
         <hr />
 
-        Animation
+        <Animation />
     </div>
 </template>
 
 <script>
 import Lifecycle from './components/Lifecycle.vue'
 import FruitMixer from './components/FruitMixer.vue'
+import Animation from './components/Animation.vue';
 
 export default {
     name: 'App',
     components: {
-        Lifecycle, FruitMixer
+        Lifecycle, FruitMixer, Animation
     },
     data: () => ({
         showLifecycle1: true,
