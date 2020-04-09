@@ -10,7 +10,7 @@
 
         <hr />
 
-        Mixin
+        <FruitMixer />
 
         <hr />
 
@@ -20,11 +20,12 @@
 
 <script>
 import Lifecycle from './components/Lifecycle.vue'
+import FruitMixer from './components/FruitMixer.vue'
 
 export default {
     name: 'App',
     components: {
-        Lifecycle
+        Lifecycle, FruitMixer
     },
     data: () => ({
         showLifecycle1: true,
