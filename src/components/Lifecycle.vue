@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="framed">
 		<h1>Lifecycle functions demo</h1>
 		<button @click="value += 1">Add 1 to value</button>
 		Value is {{value}}
@@ -31,5 +31,10 @@ export default {
 </script>
 
 <style scoped>
-
+.framed {
+	border: 1px solid gray;
+	border-radius: 4px;
+	padding: 0.5em;
+	margin: 0.3em 0em;
+}
 </style>

@@ -3,8 +3,18 @@
         <button @click="showLifecycle1 = !showLifecycle1">Toggle lifecycle 1</button>
         <Lifecycle v-if="showLifecycle1" />
 
+        <hr />
+
         <button @click="showLifecycle2 = !showLifecycle2">Toggle lifecycle 2</button>
         <Lifecycle v-show="showLifecycle2" />
+
+        <hr />
+
+        Mixin
+
+        <hr />
+
+        Animation
     </div>
 </template>
 
@@ -31,5 +41,9 @@ export default {
     /* text-align: center; */
     color: #2c3e50;
     /* margin-top: 60px; */
+}
+hr {
+    margin: 1.5em 0em;
+    border: 2px solid gray;
 }
 </style>
