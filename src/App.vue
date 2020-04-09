@@ -1,28 +1,35 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div id="app">
+        <button @click="showLifecycle1 = !showLifecycle1">Toggle lifecycle 1</button>
+        <Lifecycle v-if="showLifecycle1" />
+
+        <button @click="showLifecycle2 = !showLifecycle2">Toggle lifecycle 2</button>
+        <Lifecycle v-show="showLifecycle2" />
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Lifecycle from './components/Lifecycle.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+    name: 'App',
+    components: {
+        Lifecycle
+    },
+    data: () => ({
+        showLifecycle1: true,
+        showLifecycle2: true
+    })
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* text-align: center; */
+    color: #2c3e50;
+    /* margin-top: 60px; */
 }
 </style>
